@@ -116,6 +116,7 @@ class BathHouseModel(models.Model):
     number_phone = PhoneNumberField(verbose_name='Номер телефона')
     my_type = models.CharField(max_length=5,verbose_name='Пол', choices=CheckModels.choices, null=False, blank=False)
     hours = models.CharField(max_length=5,verbose_name='На сколько забранировано', choices=HoursModel.choices, null=False, blank=False)
+    end_time = models.DateTimeField(verbose_name='Время окончания')
     
     
     def __str__(self):
@@ -125,3 +126,5 @@ class BathHouseModel(models.Model):
         ordering = ['number_key']
         verbose_name='Очередь'
         verbose_name_plural='Очередь'
+
+

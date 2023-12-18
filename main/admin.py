@@ -26,8 +26,8 @@ class Users_Admin(UserAdmin):
 
 class BathHouseModelAdmin(admin.ModelAdmin):
     model = BathHouseModel
-    list_display = ('number_key', 'first_name', 'number_phone', 'date_start', 'my_type')
-    list_filter = ('number_key', 'first_name', 'number_phone','date_start', 'my_type' )
+    list_display = ('number_key', 'first_name', 'number_phone', 'date_start', 'my_type','end_time')
+    list_filter = ('number_key', 'first_name', 'number_phone','date_start', 'my_type','end_time' )
     search_fields = ('number_key',)
     ordering = ('number_key',)
 
